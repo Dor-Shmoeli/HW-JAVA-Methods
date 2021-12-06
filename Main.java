@@ -3,24 +3,25 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        int[] array = {3, 696, 9, 8, 52, 74, 8896, 5};
+        int[] array = {3, 696, 9, 8, 52, 74, 8896, 3};
         int[] hasA = {6, 7, 3, 1, 4, 6};
         int[] hasB = {6, 7, 3, 1, 4, 2};
         int[] hasC = {6, 7, 3, 2, 1, 2};
+        firstLast3(array);
+
+        createArray(4,200);
+        createArray(3,365);
 
         System.out.println(has12(hasA)+" A");
 
         System.out.println(has12(hasB)+" B");
 
         System.out.println(has12(hasC)+" C");
-
-//        createArray(4,200);
-//        createArray(3,365);
     }
 
 
 
-/*
+
     public static boolean firstLast3(int[] nums) {
         int length = nums.length - 1;
         int last = nums[length];
@@ -30,9 +31,9 @@ public class Main {
         // return true if the first value in the array is 3 and the last value in the array.
         // length -1 (LAST) i = 0 (first)
 
-    }*/
+    }
 
-/*
+
     public static int[] createArray(int arrayLength, int lastValue){  // (4, 200)
 
         int[] arr = new int[arrayLength];
@@ -45,24 +46,27 @@ public class Main {
         // return new int[]{0,0,0,200}
         // (LAST) arr.length -1
          }
-*/
+
 
     public static boolean has12(int[] numbers){
 
-
+            int counter = 0;
             for (int i = 0; i< numbers.length; i++){
             if(numbers[i] == 1){
-               break;
-               int j;
-               j++;
-               continue;
-            }
-
+                counter++;
 
             }
+            if ( numbers[i] == 2){
+                counter++;
+            }
+
+            }
+
         System.out.println(counter);
-        return counter > 1 ;
+        return counter == 2 ;
+
     }
+
     // return true if there is value=1 in the array and somewhere later value=2
     // [6,7,3,1,4,6] =>false
     // [6,7,3,1,4,2] =>true
