@@ -7,7 +7,7 @@ public class Main {
         int[] hasA = {6, 7, 3, 1, 4, 6};
         int[] hasB = {6, 7, 3, 1, 4, 2};
         int[] hasC = {6, 7, 3, 2, 1, 2};
-        firstLast3(array);
+        System.out.println(firstLast3(array));
 
         createArray(4,200);
         createArray(3,365);
@@ -26,8 +26,8 @@ public class Main {
         int length = nums.length - 1;
         int last = nums[length];
         int first = nums[0];
-        System.out.println((last ==3) & (first == 3));
-        return false;
+
+        return (last ==3) & (first == 3);
         // return true if the first value in the array is 3 and the last value in the array.
         // length -1 (LAST) i = 0 (first)
 
